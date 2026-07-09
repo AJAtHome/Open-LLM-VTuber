@@ -125,15 +125,19 @@ character_config:
       llama_cpp_llm:
         model_path: '<path-to-gguf-model-file>'
         verbose: False
-
-      ollama_llm:
-        base_url: 'http://localhost:11434/v1'
-        model: 'qwen2.5:latest'
-        temperature: 1.0 # value between 0 to 2
-        # seconds to keep the model in memory after inactivity. 
+  
+#      ollama_llm:
+ #       base_url: 'http://localhost:11434/v1'
+ #       model: 'qwen2.5:latest'
+  #      temperature: 1.0 # value between 0 to 2
+  #      # seconds to keep the model in memory after inactivity. 
         # set to -1 to keep the model in memory forever (even after exiting open llm vtuber)
-        keep_alive: -1
-        unload_at_exit: True # unload the model from memory at exit
+   #     keep_alive: -1
+    #    unload_at_exit: True # unload the model from memory at exit
+      ollama_llm:
+        base_url: http://localhost:11434
+        model: qwen2.5:7b   # match whatever you pulled
+        temperature: 0.7
 
       lmstudio_llm:
         base_url: 'http://localhost:1234/v1'
